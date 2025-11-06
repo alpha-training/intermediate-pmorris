@@ -1,6 +1,6 @@
 myPar:{[d;p;t] / myPar[`:db;2025.01.01;`trade]  
     a:@[read0;` sv d,`par.txt;d];
-    part:$[a~d;hsym a;hsym `$a[.q.mod[p;count a]]];
+    part:$[a~d;hsym a;hsym `$a mod[p;count a]];
     ` sv part,`$string p,t
  }
 
