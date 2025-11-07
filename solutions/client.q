@@ -4,8 +4,8 @@ h:hopen 5050
 
 sub:{
     a:h(`.u.sub;`;`);
-    L:a[0;1];
-    -11!L
+    -11!first a;
+    -1 last a
  }
 
 sub`;

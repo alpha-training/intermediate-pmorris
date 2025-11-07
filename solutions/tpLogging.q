@@ -8,7 +8,7 @@ N:100
 S:`JPM`GE`IBM
 C:T!(`time`sym`price;`time`sym`bid`ask)
 l:0Ni			/ handle to the log file, null to start with
-w:()!()
+w:T!()
 
 initLog:{  
   L::hsym `$"logs/tp",string[.z.d],".log";
@@ -29,7 +29,9 @@ upd:{[t;x]
 
 / fill in your code from previous exercises
 sub:{[t;s]
-  $[11=type t;.z.s each t;w[t]::distinct w[t],.z.w];
+  a:$[t=`;T;t];
+  / @[`w;a;union;.z.w]; / This should work but it gives me a type error?
+  w[a]:w[a] union' .z.w;
   ((i;L);"snapshot")
  }
 
