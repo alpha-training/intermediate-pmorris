@@ -12,19 +12,25 @@ w:()!()
 
 initLog:{  
   L::hsym `$"logs/tp",string[.z.d],".log";
+  if[() ~ key L;system"mkdir logs";L set ()];
+  if[not null l;@[hclose;l;::]];
   l::hopen L;
+  i::count read0 L;
+  -1"Initialised log: ",(string L), " with ",(string i), " records";
  }
 
 / fill in your code from previous exercises
-upd:{[t; x] 
+upd:{[t;x] 
     i+:1;
-    tbl:([] C[t]!x);
-    l enlist (t;x); 
+    tbl:flip C[t]!x;
+    l enlist (t;x);
+    neg[w t]@\:(`upd;t;tbl)
   }
 
 / fill in your code from previous exercises
 sub:{[t;s]
-  $[11=type t;.z.s each t;w[t]::distinct w[t],.z.w]
+  $[11=type t;.z.s each t;w[t]::distinct w[t],.z.w];
+  ((i;L);"snapshot")
  }
 
 / take from elsewhere
