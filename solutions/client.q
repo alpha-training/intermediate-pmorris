@@ -1,6 +1,4 @@
 upd:upsert
-trade:()
-quote:()
 
 h:hopen 5050
 

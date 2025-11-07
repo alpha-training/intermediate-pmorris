@@ -23,8 +23,8 @@ initLog:{
 upd:{[t;x] 
     i+:1;
     tbl:flip C[t]!x;
-    l enlist (t;x);
-    neg[w t]@\:(`upd;t;tbl)
+    neg[w t]@\:(`upd;t;tbl);
+    l enlist (`upd;t;tbl)
   }
 
 / fill in your code from previous exercises
