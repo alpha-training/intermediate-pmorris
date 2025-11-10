@@ -15,7 +15,7 @@ del:{[x;y]
 / select from table (only give subscriber what they want)
 / x=table data, y=sym(s) or `
 sel:{[x;y]
-    $[y~`;x;x where x[`sym] in enlist y]
+    $[y~`;x;x where x[`sym] in y]
  }
  
 / add subscription
