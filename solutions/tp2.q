@@ -58,6 +58,8 @@ tick:{
 	ld d;		/ call ld
  }
 
+/ 
+/ simulate feed
 .z.ts:{
 	T:rand t;
 	n:1+rand 1000;
@@ -65,6 +67,7 @@ tick:{
 	a:(n#.z.p;n?S),$[T=`trade;1#n;2#n]?\:100f;
 	upd[T;a];
  }
+\
 
 \d .
 
