@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Get values from 0 to INPUT*/
+int main() {
+    for (int i = 0; i < 10; i++)
+        printf("%d ", i);
+    return 0;
+}
