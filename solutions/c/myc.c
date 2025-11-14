@@ -1,9 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "k.h"
 
-/* Get values from 0 to INPUT*/
-int main() {
-    for (int i = 0; i < 10; i++)
-        printf("%d ", i);
-    return 0;
+K ctil(K x) {
+    J n = x->j;              
+
+    K out = ktn(KJ, n);      
+    for (J i = 0; i < n; i++)
+        kJ(out)[i] = i;      
+
+    return out;
 }

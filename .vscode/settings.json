@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "*.q": "q",
-        "iostream": "c"
+        "iostream": "c",
+        "stdio.h": "c"
     }
 }
