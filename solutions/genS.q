@@ -1,4 +1,4 @@
-genS:{$[x=1;`$'.Q.A;`$(raze (cross\)x#enlist .Q.A)]}
+genS:{$[x=1;`$'.Q.A;`$raze (cross\)x#enlist .Q.A]}
 
 \
 
