@@ -1,7 +1,6 @@
 genSyms:{[n]
-    append:{raze flip (x,\:/:.Q.A)};
-    getString:append/[n-1;.Q.A];
-    `$/:getString
+    getString:{raze flip (x,\:/:.Q.A)}/[n-1;.Q.A];
+    `$getString
     }
 
 \
