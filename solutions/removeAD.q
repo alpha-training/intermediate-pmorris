@@ -1,3 +1,1 @@
-removeAD:{[x]
-    x where not (~':) x
-    }
+removeAD:{x where not (~':) x}
