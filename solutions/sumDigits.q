@@ -1,1 +1,1 @@
-sumDigits:{sum "J"$/:(string x)}
+sumDigits:{sum "J"$/:string x}
