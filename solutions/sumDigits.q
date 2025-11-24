@@ -1,0 +1,1 @@
+sumDigits:{sum "J"$/:(string x)}
