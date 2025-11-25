@@ -1,1 +1,1 @@
-charfreq:{(`$/:distinct x)!(count ss[x;]@) each distinct x}
+charFreq:{(`$/:distinct x)!(count ss[x;]@) each distinct x}
