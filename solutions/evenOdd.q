@@ -1,0 +1,1 @@
+evenOdd:{(x except p),p:x where x mod 2}
