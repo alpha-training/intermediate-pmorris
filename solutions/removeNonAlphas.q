@@ -1,0 +1,1 @@
+removeNonAlphas:{x where x in .Q.an," "}
