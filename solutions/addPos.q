@@ -1,0 +1,1 @@
+addPos:{update pos:sums ?[`B=side;size;neg size] by sym from x}
