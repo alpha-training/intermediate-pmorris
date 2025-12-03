@@ -1,1 +1,1 @@
-firstNonRepeating:{(count each group x)?1}
+firstNonRepeating:{first x where not((x=next x)|x=prev x)}
