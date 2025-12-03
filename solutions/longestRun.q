@@ -1,4 +1,6 @@
 longestRun:{[x]
-    a:(where 1<>deltas cons) _ cons:{x where (1=deltas x)|1=next deltas x}/[x];
-    a c?max c:count each a
+    splCons:(where differ 1 = 0N-':x)_x;
+    cons:splCons where 1=last each deltas each splCons;
+    n:cons c?max c:count each cons;
+    (-1+n 0),n
     }
