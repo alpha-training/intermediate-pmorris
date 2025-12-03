@@ -12,7 +12,3 @@ longestRun3:{[x]
     t4:select from t3 where b,spn=max spn;
     n except where (n:1+til first t4`v)<=(first (t4`v)-t4`spn)
     }
-
-\l /home/pmorris/code/intermediate-alf/longestRun.q_
-L:1 2 3,(5?10),4 5 6 7 8 9,5?10
-x:5000000?30
