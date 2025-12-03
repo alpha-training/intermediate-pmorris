@@ -6,9 +6,9 @@ longestRun:{[x]
     }
 
 longestRun3:{[x]
-    t:([] idx:til count x;v:x;b:1=0N-':x);
-    t2:select from t where (b|next b)&((not b)|not next b);
-    t3:update spn:idx-prev idx from t2;
+    t:([] v:x;b:1=0N-':x);t:update I:i from t;
+    t2:select from t where b|next b,not[b]|not next b;
+    t3:update spn:I-prev I from t2;
     t4:select from t3 where b,spn=max spn;
     n except where (n:1+til first t4`v)<=(first (t4`v)-t4`spn)
     }
