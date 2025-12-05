@@ -1,3 +1,3 @@
 rollingReset:{[x]
-    {$[y=0;0;x+y]}\[0;x*-1<>signum x]
+    L*-1<>signum L:raze sums each (where differ -1=signum x)_x
     }
