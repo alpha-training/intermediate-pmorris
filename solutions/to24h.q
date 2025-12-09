@@ -1,8 +1,6 @@
 to24h:{[x]
-    t:([] st:x;tm:"V"$-3_'x);
-    t2:update twlv:tm>12:00:00 from t;
-    t3:update am:any each -2#'s in "A" from t2;
-    t4:update tm+12:00:00 from t3 where (not twlv)&not am;
-    t5:update tm-12:00:00 from t4 where twlv&am;
-    t5`tm 
+    t:([] s:s;tm:tm;L:(any each s in "A") + 2*12:00:00<tm:"V"$-3_'s);
+    t:update tm+12:00:00 from t where L=0;
+    t:update tm-12:00:00 from t where L=3;
+    t`tm
     }
