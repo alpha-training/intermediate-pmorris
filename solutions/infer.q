@@ -1,4 +1,11 @@
-infer:{@[get;x;{x}]}
+infer:{[x]
+    if[":"~first x;:`$x];
+    if[99=type x;:(key x)!get each get x];
+    if["/"~first @[parse;x;{x}];:x];
+    $[1<>count @[parse;x;{x}];
+        $[not type parse x;@[get;;{x}]each string parse x;:@[get;x;{x}]];
+        :@[get;x;{x}]]
+    }
 
 /
 unit:enlist`s`result`expected!(::;::;::)
@@ -24,7 +31,7 @@ ufx["data/path";"data/path"]
 ufx["John123";"John123"]
 ufx["exit 1";("exit";1)]
 ufx[`size`price`sym!("10";"4.5";"`JPM");`size`price`sym!(10;4.5;`JPM)]
-ufx[enlist`size`price`sym!("10";"4.5";"`JPM");enlist`size`price`sym!(10;4.5;`JPM)]
+/ufx[enlist`size`price`sym!("10";"4.5";"`JPM");enlist`size`price`sym!(10;4.5;`JPM)]
 
 delete from`unit where s~'(::);
 
