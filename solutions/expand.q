@@ -7,7 +7,8 @@ expand:{[x]
     confVars:"$",/:.qi.tostr 1_key .conf;
     L:(where not x in .Q.an)_x;
     L[v]:.qi.tostr .conf`$1_'L[v:where L in confVars];
-    L[where L like "$*"]:`MISSING;
-    L:.qi.tostr L;
+    if[any n:L like "$*";
+        L[where n]:`MISSING;
+        L:.qi.tostr L];
     raze L
     }
