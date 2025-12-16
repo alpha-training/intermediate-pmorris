@@ -1,12 +1,12 @@
 infer:{[x]
     if[":"~first x;:`$x];
-    if[any 98 99 in type[x];.z.s each x];
+    if[type[x] in 0 98 99h;:.z.s each x];
     if[10<>abs type[x];:x];
-    if[1=count x;:x];
+    if[1=count x;:first @[get;x;{x}]];
     if["`"=first x;:get x];
     if[not all x in .Q.an,"-`:;. ";:x];
     $[not type parse x;
-        .z.s each x;
+        $[" "in x;:.z.s each " "vs x;:x];
         @[get;x;{x}]]
     }
 
