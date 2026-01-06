@@ -1,6 +1,7 @@
 allocate:{
     diff:x-sum fdec:floor dec:x*y%sum y;
-    fInd:dd?diff#desc dd:dec-fdec;
-    fdec[fInd]:fdec[fInd]+1;
+    fdec[a]:1+fdec[a:where (iasc dec-fdec)<diff];
     fdec
     }
+
+\l /home/pmorris/code/intermediate-alf/allocate.q_
